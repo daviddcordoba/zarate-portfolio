@@ -1,25 +1,43 @@
 import { useState } from 'react'
 import './App.css'
 import profile_pic from './assets/profile_pic.jpeg'
+import phoneMockup from './assets/ahorasi.png'
 import about_pic from './assets/356223726_832998341495275_5659792196220834236_n.jpg'
+import tiktok1 from './assets/tiktok1.mp4'
+import ReactPlayer from 'react-player'
+import { IoMailOutline } from "react-icons/io5";
+import { LiaLinkedin } from "react-icons/lia";
+
+
 function App() {
 
   return (
     <main>
-      <nav className='flex justify-around items-center h-[17vh]'>
-        <div className='text-2xl'>Gabriela Zarate</div>
-        <div>
-          <ul className='flex gap-8 text-2xl'>
-          <li><a href="#sobremi" target="_blank" rel="noopener noreferrer">Sobre mi </a></li>
-          <li><a href="#experiencia" target="_blank" rel="noopener noreferrer">Experiencia</a></li>
-          <li><a href="#proyectos" target="_blank" rel="noopener noreferrer">Proyectos</a></li>
-          <li><a href="#contacto" target="_blank" rel="noopener noreferrer">Contacto</a></li>
-          </ul>
-        </div>
-      </nav>
+      <header className='flex justify-center items-center
+    mx-auto
+    py-5
+    sticky top-0
+    w-full xl:w-[1120px]
+    z-10'>
+        <nav className='border border-black rounded-full
+      px-3 py-1
+      flex flex-row items-center
+      bg-neutral-200 dark:bg-grey/50
+      backdrop-blur-2xl'>
+          
+          <div>
+            <ul className='flex gap-8 text-2xl'>
+            <li><a href="#inicio">Inicio </a></li>
+            <li><a href="#sobremi">Sobre mi </a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
-
-      <section className=' w-[70%] mx-auto my-0 gap-[10rem] h-[96vh]  flex justify-center items-center'>
+      <section className='w-[70%] mx-auto my-0 gap-[10rem] h-[96vh]  flex justify-center items-center'>
       <div className="w-[500px] h-[500px] rounded-full overflow-hidden">
         <img
           src={profile_pic}
@@ -48,10 +66,10 @@ function App() {
       </section>
 
 
-      <section className='bg-red-200'>
-        <p>Vamos a conocer mas</p>
-        <h1>Sobre mi</h1>
-        <div className='flex flex-col h-[96vh] w-full items-center'>
+      <section id='sobremi' >
+        <p className='text-center text-lg text-slate-500'>Vamos a conocer mas</p>
+        <h1 className='text-center text-4xl'>Sobre mi</h1>
+        <div className='flex flex-col h-[96vh] w-full items-center my-5'>
 
           <div className="w-[400px] h-[350px] rounded-[2rem] overflow-hidden">
             <img
@@ -86,7 +104,44 @@ function App() {
 
       </section>
 
-      
+      <section className='my-20'>
+        <p className='text-center text-lg text-slate-500'>Explore My</p>
+        <h1 className='text-center text-4xl mb-12'>Experiencia</h1>
+
+          <div className='flex justify-center'>
+            <div className='px-10 flex flex-col justify-end items-center'>
+              <div className=' relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
+                <div className='absolute inset-[-19.5px] h-full w-full object-cover'>
+                  <ReactPlayer url={tiktok1} controls width={310} height={600}/>
+
+                </div>
+              </div>
+              <h2>Tiktok1</h2>
+            </div>
+
+            
+
+            
+          </div>
+        
+      </section>
+
+      <section className='my-20'>
+        <p className='text-center text-lg text-slate-500'>Get in touch</p>
+        <h1 className='text-center text-4xl'>Contact me</h1>
+
+        <div className=' flex mt-5 h-[75px] mx-auto w-[500px] items-center justify-center gap-2 border-[0.12rem] rounded-[2rem] border-gray-600'>
+          <div className='flex gap-1'>
+            <IoMailOutline  className = 'text-[21px] h-6 '/>
+            <p><a href="">gabzm240@gmail.com</a></p>
+          </div>
+
+          <div className='flex gap-1'>
+            <LiaLinkedin className = 'text-2xl'/>
+            <p><a href="">Linkedin</a></p>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
