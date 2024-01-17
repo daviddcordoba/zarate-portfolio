@@ -4,16 +4,21 @@ import profile_pic from './assets/profile_pic.jpeg'
 import phoneMockup from './assets/ahorasi.png'
 import about_pic from './assets/356223726_832998341495275_5659792196220834236_n.jpg'
 import tiktok1 from './assets/tiktok1.mp4'
+import labialMaybelline from './assets/labialMaybelline.mp4'
+import meriendacba from './assets/meriendacba.mp4'
+import ondasSinCalor from './assets/ondasSinCalor.mp4'
+
+
 import ReactPlayer from 'react-player'
 import { IoMailOutline } from "react-icons/io5";
 import { LiaLinkedin } from "react-icons/lia";
 
-
+const UGC_VIDEOS = [tiktok1,labialMaybelline,meriendacba,ondasSinCalor]
 function App() {
 
   return (
-    <main>
-      <header className='flex justify-center items-center
+    <main id='inicio'>
+      <header  className='flex justify-center items-center
     mx-auto
     py-5
     sticky top-0
@@ -29,15 +34,15 @@ function App() {
             <ul className='flex gap-8 text-2xl'>
             <li><a href="#inicio">Inicio </a></li>
             <li><a href="#sobremi">Sobre mi </a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#experiencia">UGC</a></li>
+            <li><a href="#proyectos">Trabajos</a></li>
             <li><a href="#contacto">Contacto</a></li>
             </ul>
           </div>
         </nav>
       </header>
 
-      <section className='w-[70%] mx-auto my-0 gap-[10rem] h-[96vh]  flex justify-center items-center'>
+      <section  className='w-[70%] mx-auto my-0 gap-[10rem] h-[96vh]  flex justify-center items-center'>
       <div className="w-[500px] h-[500px] rounded-full overflow-hidden">
         <img
           src={profile_pic}
@@ -105,25 +110,37 @@ function App() {
       </section>
 
       <section className='my-20'>
-        <p className='text-center text-lg text-slate-500'>Explore My</p>
-        <h1 className='text-center text-4xl mb-12'>Experiencia</h1>
+        <p className='text-center text-lg text-slate-500'>UGC</p>
+        <h1 className='text-center text-4xl mb-12'>Contenido Generado por el Usuario</h1>
 
-          <div className='flex justify-center'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8'>
+          {UGC_VIDEOS.map(video => 
             <div className='px-10 flex flex-col justify-end items-center'>
               <div className=' relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
                 <div className='absolute inset-[-19.5px] h-full w-full object-cover'>
-                  <ReactPlayer url={tiktok1} controls width={310} height={600}/>
-
+                  <ReactPlayer url={video} controls width={310} height={600}/>
                 </div>
               </div>
               <h2>Tiktok1</h2>
-            </div>
+            </div>)}
+          </div>        
+      </section>
 
-            
+      <section className='my-20'>
+        <p className='text-center text-lg text-slate-500'>Trabajos</p>
+        <h1 className='text-center text-4xl mb-12'>Creacion de contenido y Manejo de Redes</h1>
 
-            
-          </div>
-        
+          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8'>
+          {UGC_VIDEOS.map(video => 
+            <div className='px-10 flex flex-col justify-end items-center'>
+              <div className=' relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
+                <div className='absolute inset-[-19.5px] h-full w-full object-cover'>
+                  <ReactPlayer url={video} controls width={310} height={600}/>
+                </div>
+              </div>
+              <h2>Tiktok1</h2>
+            </div>)}
+          </div>        
       </section>
 
       <section className='my-20'>
