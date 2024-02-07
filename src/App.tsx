@@ -17,7 +17,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 
 import ReactPlayer from 'react-player'
-import { CiLink } from "react-icons/ci";
+
 import { IoMailOutline } from "react-icons/io5";
 import { LiaLinkedin } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
