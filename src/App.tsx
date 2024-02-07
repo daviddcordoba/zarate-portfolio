@@ -1,7 +1,6 @@
-import { useState } from 'react'
+
 import './App.css'
 import profile_pic from './assets/profile_pic.jpeg'
-import phoneMockup from './assets/ahorasi.png'
 import about_pic from './assets/fotogrupalfcc.jpg'
 import tiktok1 from './assets/tiktok1.mp4'
 import labialMaybelline from './assets/labialMaybelline.mp4'
@@ -25,7 +24,6 @@ import { FaTiktok } from "react-icons/fa6";
 const UGC_VIDEOS = [{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor}]
 const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'},{name: 'Infografia: Seminario Com. y salud', data: trabajoFomo,type: 'imagen'},{name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'},{name: 'Pieza sonora: Homenaje a malvinas', data: Malvinas,type: 'video'},{name: 'Otra puesta', data: otraPuesta,type: 'imagen'},{name: 'Salem Vintage', data: salemVintage,type: 'imagen'}]
 
-
 function App() {
 
   const email = 'gabzm240@gmail.com';
@@ -33,7 +31,7 @@ function App() {
     const copyToClipboard = () => {
         navigator.clipboard.writeText(email)
             .then(() => {
-                alert('¡Correo electrónico copiado al portapapeles!'); 
+                console.log('¡Correo electrónico copiado al portapapeles!'); 
             })
             .catch(err => {
                 console.error('Error al copiar al portapapeles: ', err);
