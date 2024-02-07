@@ -12,6 +12,8 @@ import ElSilencio from './assets/ElSilencio.mp4'
 import Bohem from './assets/bohem.jpeg'
 import otraPuesta from './assets/otrapuestaCM.png'
 import salemVintage from './assets/salemCM.png'
+import resume from './assets/CV-ZarateG.pdf'
+import { FaWhatsapp } from "react-icons/fa";
 
 
 import ReactPlayer from 'react-player'
@@ -22,11 +24,13 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 
 const UGC_VIDEOS = [{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor}]
-const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'},{name: 'Infografia: Seminario Com. y salud', data: trabajoFomo,type: 'imagen'},{name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'},{name: 'Pieza sonora: Homenaje a malvinas', data: Malvinas,type: 'video'},{name: 'Otra puesta', data: otraPuesta,type: 'imagen'},{name: 'Salem Vintage', data: salemVintage,type: 'imagen'}]
+const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'},{name: 'Infografia: Seminario Comunicacion y salud', data: trabajoFomo,type: 'imagen'},{name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'},{name: 'Pieza sonora: Homenaje a malvinas', data: Malvinas,type: 'video'},{name: 'Otra puesta', data: otraPuesta,type: 'imagen'},{name: 'Salem Vintage', data: salemVintage,type: 'imagen'}]
+
 
 function App() {
 
   const email = 'gabzm240@gmail.com';
+
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(email)
@@ -64,7 +68,7 @@ function App() {
         </nav>
       </header>
 
-      <section  className='w-[70%] mx-auto my-0 gap-[10rem] h-[96vh]  flex justify-center items-center'>
+      <section  className='w-[85%] mx-auto my-0 gap-[10rem] h-[96vh] flex items-center'>
       <div className="w-[500px] h-[500px] rounded-full overflow-hidden">
         <img
           src={profile_pic}
@@ -73,20 +77,20 @@ function App() {
         />
       </div>
           
-        <div className='flex flex-col items-center m-2 gap-5'>
-          <p className='font-semibold text-white text-2xl pt-2'>Hola, soy</p>
-          <h1 className='text-4xl font-bold'>Gabriela Zarate</h1>
-          <p className='text-2xl font-semibold text-white '>Communiy Manager</p>
+        <div className='flex flex-col m-2 gap-5'>
+          <p className='font-semibold text-white text-4xl pt-2'>Hola, soy <span className='text-black text-5xl font-bold'>Gabriela Zarate</span></p>
+         
+          <p className='text-2xl font-semibold text-white '> Lic. en Com. Social | Creadora de Contenido | Community Manager</p>
           
           <div className='flex gap-[1rem] justify-center '>
-            <button className='bg-gray-200 font-semibold p-4 w-[8rem]  rounded-[2rem]'>Descargar CV</button>
-            <button className='bg-gray-200 font-semibold p-4 w-[8rem]  rounded-[2rem]'>Contacto</button>
+            <button  className='bg-gray-200 font-semibold p-3 w-[8rem]  rounded-[2rem]'><a href={resume} download='zarate-gabrielaCV'>Descargar CV</a></button>
+            <button className='bg-gray-200 font-semibold p-3 w-[8rem]  rounded-[2rem]'>Contacto</button>
 
           </div>
-        <div className='flex gap-2 justify-center'>
-          <button className='p-2'><FaInstagram className='text-3xl'/></button>
-          <button className='p-2'><FaTiktok className='text-2xl'/></button>
-          <button className='p-2'><LiaLinkedin className = 'text-4xl'/></button>
+        <div className='flex gap-2 justify-center items-center'>
+          <a href='https://www.instagram.com/gabizarate._/?hl=es-la'  target='_blank' className='p-2'><FaInstagram className='text-3xl'/></a>
+          <a href='https://www.tiktok.com/@gabizarate' target='_blank' className='p-2'><FaTiktok className='text-2xl'/></a>
+          <a href='https://www.linkedin.com/in/gabriela-zarate-35748328b/' target='_blank' className='p-2'><LiaLinkedin className = 'text-4xl'/></a>
         </div>
         </div>
 
@@ -152,7 +156,7 @@ function App() {
         <p className='text-center text-2xl text-gray-400'>Mas trabajos</p>
         <h2 className='text-center text-4xl mb-12 text-white'>Produccion de contenido gráfico | Arte sonoro | Podcast</h2>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8'>
+          <div className='grid grid-cols-1  sm:grid-cols-2 xl:grid-cols-4 gap-8'>
           {TRABAJOS.map(trabajo => 
             <div className='px-10 flex flex-col justify-end items-center'>
               <div className=' relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
@@ -163,26 +167,31 @@ function App() {
                   
                 </div>
               </div>
-              <div className='flex gap-2 items-center'><h2 className='text-xl text-white '>{trabajo.name} <a href="https://issuu.com/revistabohem/docs/revistafinal_pico"><CiLink className='text-2xl text-white' /></a></h2></div>
+              <h2 className='text-lg text-white '><a href="https://issuu.com/revistabohem/docs/revistafinal_pico">{trabajo.name}</a></h2>
               
             </div>)}
           </div>        
       </section>
 
-      <section className='my-20'>
+      <section className='my-20' id='contacto'>
         <p className='text-center text-lg text-gray-400'>Get in touch</p>
         <h1 className='text-center text-5xl text-white'>Contact me</h1>
 
         <div className=' flex mt-5 h-[75px] mx-auto w-[500px] text-white items-center justify-center gap-2 border-[0.12rem] rounded-[2rem] border-white'>
         <div className='flex gap-1'>
             <IoMailOutline className='text-[21px] h-6' />
-            <p><a href="#" onClick={copyToClipboard}>{email}</a></p>
+            <a href='#contacto'  onClick={copyToClipboard}>{email}</a>
         </div>
 
-          <div className='flex gap-1'>
-            <LiaLinkedin className = 'text-2xl'/>
-            <p><a href="">Linkedin</a></p>
-          </div>
+        <a href="https://www.linkedin.com/in/gabriela-zarate-35748328b/" className='flex gap-1'>
+          <LiaLinkedin className='text-2xl' />
+          <p>Linkedin</p>
+        </a>
+
+        <a href="https://api.whatsapp.com/send?phone=2804806333" className='flex gap-1' target='_blank'>
+          <FaWhatsapp className='text-2xl' />
+          <p>WhatsApp</p>
+        </a>
         </div>
       </section>
     </main>
