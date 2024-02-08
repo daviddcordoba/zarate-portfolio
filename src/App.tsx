@@ -53,7 +53,7 @@ function App() {
     };
 
   return (
-    <main id='inicio'>
+    <main id='inicio' translate='no'>
       <header  className='flex justify-center items-center
     mx-auto
     py-5
