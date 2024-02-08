@@ -28,7 +28,13 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 
 const UGC_VIDEOS = [{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
-const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'},{name: 'Infografia: Seminario Comunicacion y salud', data: trabajoFomo,type: 'imagen'},{name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'},{name: 'Pieza sonora: Homenaje a malvinas', data: Malvinas,type: 'video'},{name: 'Otra puesta', data: otraPuesta,type: 'imagen'},{name: 'Salem Vintage', data: salemVintage,type: 'imagen'}]
+const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'  ,link:'https://fzaratem24.wixsite.com/est-tica-radiof-nica'},
+                  {name: 'Infografia: Seminario Comunicacion y salud', data: trabajoFomo,type: 'imagen', link : ''},
+                  {name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'  ,link:'https://issuu.com/revistabohem/docs/revistafinal_pico'},
+                  {name: 'Pieza sonora: Homenaje a malvinas', data: Malvinas,type: 'video', link : '' },
+                  {name: 'Otra puesta', data: otraPuesta,type: 'imagen ', link : ''},
+                  {name: 'Salem Vintage', data: salemVintage,type: 'imagen ', link : ''}
+                ]
 
 
 function App() {
@@ -158,8 +164,6 @@ creativa y personalmente.</p>
             <h2  className='text-xl text-white max-w-[305px] text-center  overflow-hidden'>{video.name}</h2>
         </div>
     ))}
-    {/* Este div vacío garantiza que alinees correctamente los elementos en la segunda fila */}
-    <div className='sm:hidden xl:flex flex-col items-center justify-center'></div>
 </div>       
       </section>
 
@@ -178,7 +182,8 @@ creativa y personalmente.</p>
                   
                 </div>
               </div>
-              <h2 className='text-xl text-white max-w-[305px] text-center overflow-hidden'><a href="https://issuu.com/revistabohem/docs/revistafinal_pico">{trabajo.name}</a></h2>
+              {trabajo?.link?.length > 0 ? <a target='_blank' className='text-xl text-white max-w-[305px] text-center overflow-hidden hover:underline' href={trabajo.link}>{trabajo.name}</a> : <h2 className='text-xl text-white max-w-[305px] text-center overflow-hidden'>{trabajo.name}</h2> }
+              
               
             </div>)}
           </div>        
@@ -191,13 +196,13 @@ creativa y personalmente.</p>
         <div className=' flex mt-5 h-[75px] mx-auto w-[600px] text-white items-center justify-center gap-2 border-[0.12rem] rounded-[2rem] border-white'>
         
             
-            <a href='#contacto' className='flex gap-1' onClick={copyToClipboard}>
+            <a href='#contacto' className='flex gap-1' target='_blank' onClick={copyToClipboard}>
               <IoMailOutline className='text-[24px] ' />
               {email}
             </a>
         
 
-        <a href="https://www.linkedin.com/in/gabriela-zarate-35748328b/" className='flex gap-1 items-center'>
+        <a href="https://www.linkedin.com/in/gabriela-zarate-35748328b/" className='flex gap-1 items-center' target='_blank'>
           <LiaLinkedin className='text-3xl' />
           Linkedin
         </a>
