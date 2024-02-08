@@ -94,7 +94,7 @@ function App() {
           
           <div className='flex gap-[1rem] justify-center '>
             <button  className='bg-gray-200 font-semibold p-3 w-[8rem]  rounded-[2rem]'><a href={resume} download='zarate-gabrielaCV'>Descargar CV</a></button>
-            <button className='bg-gray-200 font-semibold p-3 w-[8rem]  rounded-[2rem]'>Contacto</button>
+            
 
           </div>
         <div className='flex gap-2 justify-center items-center'>
