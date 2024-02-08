@@ -13,17 +13,21 @@ import Bohem from './assets/bohem.jpeg'
 import otraPuesta from './assets/otrapuestaCM.png'
 import salemVintage from './assets/salemCM.png'
 import resume from './assets/CV-ZarateG.pdf'
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";  
+import pedidosYa from './assets/pedidosYa.mp4'
+import firstLaser from './assets/firstLaser.mp4'
+import angelaCafe from './assets/angelaCafe.mp4'
+
 
 
 import ReactPlayer from 'react-player'
-
+import { MdOutlineLink } from "react-icons/md";
 import { IoMailOutline } from "react-icons/io5";
 import { LiaLinkedin } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 
-const UGC_VIDEOS = [{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor}]
+const UGC_VIDEOS = [{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
 const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'},{name: 'Infografia: Seminario Comunicacion y salud', data: trabajoFomo,type: 'imagen'},{name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'},{name: 'Pieza sonora: Homenaje a malvinas', data: Malvinas,type: 'video'},{name: 'Otra puesta', data: otraPuesta,type: 'imagen'},{name: 'Salem Vintage', data: salemVintage,type: 'imagen'}]
 
 
@@ -51,17 +55,17 @@ function App() {
     w-full xl:w-[1120px]
     z-10'>
         <nav className='border border-black rounded-full
-      px-3 py-1
-      flex flex-row items-center
-      
-      backdrop-blur-2xl'>
+        px-3 py-1
+        flex flex-row items-center
+        
+        backdrop-blur-2xl'>
           
           <div>
             <ul className='flex gap-8 text-2xl text-white'>
             <li><a href="#inicio">Inicio </a></li>
             <li><a href="#sobremi">Sobre mi </a></li>
-            <li><a href="#experiencia">UGC</a></li>
-            <li><a href="#proyectos">Trabajos</a></li>
+            <li><a href="#ugc">UGC</a></li>
+            <li><a href="#trabajos">Trabajos</a></li>
             <li><a href="#contacto">Contacto</a></li>
             </ul>
           </div>
@@ -100,7 +104,7 @@ function App() {
       <section id='sobremi' >
         <p className='text-center text-lg text-gray-400'>Vamos a conocer mas</p>
         <h1 className='text-center text-5xl text-white'>Sobre mi</h1>
-        <div className='flex  w-[90%] gap-5 mx-auto justify-center items-center my-5 text-white'>
+        <div className='flex flex-col lg:flex-row  w-[90%] gap-5 mx-auto justify-center items-center my-5 text-white'>
 
           <div className="w-[350px] h-[500px] rounded-[2rem] overflow-hidden">
             <img
@@ -110,55 +114,62 @@ function App() {
             />
           </div>
 
-          <div className='flex justify-center flex-col w-[50%]'>
-            <div className=' flex gap-[2rem] my-[2rem]'>
-              <div className='p-[1.5rem] flex-1 border-[0.12rem] rounded-[2rem] border-white '> 
+          <div className='flex flex-col  w-[70%] lg:w-[50%]'>
+            <div className=' flex justify-center gap-[2rem] my-[2rem]'>
+              <div className='p-[1.5rem] flex-3 border-[0.12rem] rounded-[2rem] border-white '> 
                 <img src="" alt="" />
-                <h3>Experiencia</h3>
-                <p>+2 Años </p>
-                <p>Community Manager</p>
+                <h3 className='text-xl'>Otros estudios</h3>
+                <p>Community Manager - CoderHouse</p>
+                <p>Product Manager - CoderHouse</p>
+
               </div>
 
               <div className='p-[1.5rem] flex-1 border-[0.12rem] rounded-[2rem] border-white '>
               <img src="" alt="" />
-                <h3>Educacion</h3>
+                <h3 className='text-xl'>Educacion</h3>
                 <p>Lic. en Comunicacion Social</p>
-                <p>En proceso de tesis</p>
+                <p>(En proceso de tesis)</p>
               </div>
             </div>
 
-            <div>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora hic, molestias corrupti quaerat nam veniam repudiandae earum quibusdam, consequuntur nihil dolor accusamus sed minima voluptatum perferendis obcaecati facilis! Dolorum inventore dolores reprehenderit pariatur magnam quasi ea eaque ut maxime nemo unde voluptatum praesentium quas, nam expedita veritatis doloribus repellendus. Impedit.</p>
+            <div >
+              <p>Me encuentro finalizando la carrera de Comunicacion social con orientacion en radio, soy pasionada por las redes sociales y creacion de contenido. Busco experiencia laboral y
+desarrollarme en campos que me
+permitan crecer profesional,
+creativa y personalmente.</p>
             </div>
           </div>
         </div>
 
       </section>
 
-      <section className='my-20'>
+      <section className='my-20' id='ugc'>
         <p className='text-center text-lg text-gray-400 '>UGC</p>
         <h1 className='text-center text-5xl mb-12 text-white'>Contenido Generado por el Usuario</h1>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8'>
-          {UGC_VIDEOS.map(video => 
-            <div className='px-10 flex flex-col justify-end items-center'>
-              <div className=' relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
+        <div className='flex flex-wrap justify-center gap-8'>
+    {UGC_VIDEOS.map((video, index) => (
+        <div key={index} className='px-10 flex flex-col items-center'>
+            <div className='relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
                 <div className='absolute inset-[-19.5px] h-full w-full object-cover'>
-                  <ReactPlayer url={video.video} controls width={310} height={600}/>
+                    <ReactPlayer url={video.video} controls width={310} height={600} />
                 </div>
-              </div>
-              <h2 className='text-xl text-white'>{video.name}</h2>
-            </div>)}
-          </div>        
+            </div>
+            <h2  className='text-xl text-white max-w-[305px] text-center  overflow-hidden'>{video.name}</h2>
+        </div>
+    ))}
+    {/* Este div vacío garantiza que alinees correctamente los elementos en la segunda fila */}
+    <div className='sm:hidden xl:flex flex-col items-center justify-center'></div>
+</div>       
       </section>
 
-      <section className='my-20'>
+      <section className='my-20' id='trabajos'>
         <p className='text-center text-2xl text-gray-400'>Mas trabajos</p>
         <h2 className='text-center text-4xl mb-12 text-white'>Produccion de contenido gráfico | Arte sonoro | Podcast</h2>
 
-          <div className='grid grid-cols-1  sm:grid-cols-2 xl:grid-cols-4 gap-8'>
+          <div className='flex flex-wrap justify-center gap-8'>
           {TRABAJOS.map(trabajo => 
-            <div className='px-10 flex flex-col justify-end items-center'>
+            <div className='px-10 flex flex-col items-center'>
               <div className=' relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
                 <div className={`absolute ${trabajo.type === 'video' ? 'inset-[-19.5px]': ''} h-full w-full object-cover`}>
                   {trabajo.type === 'video' 
@@ -167,30 +178,38 @@ function App() {
                   
                 </div>
               </div>
-              <h2 className='text-lg text-white '><a href="https://issuu.com/revistabohem/docs/revistafinal_pico">{trabajo.name}</a></h2>
+              <h2 className='text-xl text-white max-w-[305px] text-center overflow-hidden'><a href="https://issuu.com/revistabohem/docs/revistafinal_pico">{trabajo.name}</a></h2>
               
             </div>)}
           </div>        
       </section>
 
       <section className='my-20' id='contacto'>
-        <p className='text-center text-lg text-gray-400'>Get in touch</p>
-        <h1 className='text-center text-5xl text-white'>Contact me</h1>
+        <p className='text-center text-lg text-gray-400'>Colaboremos</p>
+        <h1 className='text-center text-5xl text-white'>Contactate conmigo</h1>
 
-        <div className=' flex mt-5 h-[75px] mx-auto w-[500px] text-white items-center justify-center gap-2 border-[0.12rem] rounded-[2rem] border-white'>
-        <div className='flex gap-1'>
-            <IoMailOutline className='text-[21px] h-6' />
-            <a href='#contacto'  onClick={copyToClipboard}>{email}</a>
-        </div>
+        <div className=' flex mt-5 h-[75px] mx-auto w-[600px] text-white items-center justify-center gap-2 border-[0.12rem] rounded-[2rem] border-white'>
+        
+            
+            <a href='#contacto' className='flex gap-1' onClick={copyToClipboard}>
+              <IoMailOutline className='text-[24px] ' />
+              {email}
+            </a>
+        
 
-        <a href="https://www.linkedin.com/in/gabriela-zarate-35748328b/" className='flex gap-1'>
-          <LiaLinkedin className='text-2xl' />
-          <p>Linkedin</p>
+        <a href="https://www.linkedin.com/in/gabriela-zarate-35748328b/" className='flex gap-1 items-center'>
+          <LiaLinkedin className='text-3xl' />
+          Linkedin
         </a>
 
         <a href="https://api.whatsapp.com/send?phone=2804806333" className='flex gap-1' target='_blank'>
           <FaWhatsapp className='text-2xl' />
-          <p>WhatsApp</p>
+          WhatsApp
+        </a>
+
+        <a href="https://linktr.ee/gabizarate" className='flex gap-1' target='_blank'>
+          <MdOutlineLink className='text-2xl' />
+          Linktree
         </a>
         </div>
       </section>
