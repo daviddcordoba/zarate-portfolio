@@ -21,11 +21,13 @@ import angelaCafe from './assets/angelaCafe.mp4'
 
 
 import ReactPlayer from 'react-player'
+import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { MdOutlineLink } from "react-icons/md";
 import { IoMailOutline } from "react-icons/io5";
 import { LiaLinkedin } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
+import { useState } from 'react'
 
 const UGC_VIDEOS = [{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
 const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'  ,link:'https://fzaratem24.wixsite.com/est-tica-radiof-nica'},
@@ -41,11 +43,13 @@ function App() {
 
   const email = 'gabzm240@gmail.com';
 
+  const [copied, setCopied] = useState(false);
+
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(email)
             .then(() => {
-                console.log('¡Correo electrónico copiado al portapapeles!'); 
+                setCopied(!copied);
             })
             .catch(err => {
                 console.error('Error al copiar al portapapeles: ', err);
@@ -67,7 +71,7 @@ function App() {
         backdrop-blur-2xl'>
           
           <div>
-            <ul className='flex gap-8 text-2xl text-white'>
+            <ul className='flex gap-5 lg:gap-8 text-2xl text-white'>
             <li><a href="#inicio">Inicio </a></li>
             <li><a href="#sobremi">Sobre mi </a></li>
             <li><a href="#ugc">UGC</a></li>
@@ -78,7 +82,7 @@ function App() {
         </nav>
       </header>
 
-      <section  className='w-[85%] mx-auto my-0 gap-[10rem] h-[96vh] flex items-center'>
+      <section  className='w-[85%] mx-auto my-0 gap-8 lg:gap-[10rem] h-[96vh] flex items-center'>
       <div className="w-[500px] h-[500px] rounded-full overflow-hidden">
         <img
           src={profile_pic}
@@ -89,7 +93,6 @@ function App() {
           
         <div className='flex flex-col m-2 gap-5'>
           <p className='font-semibold text-white text-4xl pt-2'>Hola, soy <span className='text-black text-5xl font-bold'>Gabriela Zarate</span></p>
-         
           <p className='text-2xl font-semibold text-white '> Lic. en Com. Social | Creadora de Contenido | Community Manager</p>
           
           <div className='flex gap-[1rem] justify-center '>
@@ -172,8 +175,8 @@ creativa y personalmente.</p>
         <h2 className='text-center text-4xl mb-12 text-white'>Produccion de contenido gráfico | Arte sonoro | Podcast</h2>
 
           <div className='flex flex-wrap justify-center gap-8'>
-          {TRABAJOS.map(trabajo => 
-            <div className='px-10 flex flex-col items-center'>
+          {TRABAJOS.map((trabajo,id) => 
+            <div key={id} className='px-10 flex flex-col items-center'>
               <div className=' relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
                 <div className={`absolute ${trabajo.type === 'video' ? 'inset-[-19.5px]': ''} h-full w-full object-cover`}>
                   {trabajo.type === 'video' 
@@ -193,13 +196,15 @@ creativa y personalmente.</p>
         <p className='text-center text-lg text-gray-400'>Colaboremos</p>
         <h1 className='text-center text-5xl text-white'>Contactate conmigo</h1>
 
-        <div className=' flex mt-5 h-[75px] mx-auto w-[600px] text-white items-center justify-center gap-2 border-[0.12rem] rounded-[2rem] border-white'>
+        <div className=' flex flex-col w-[400px] h-[180px] gap-4 lg:flex-row  mt-5  mx-auto lg:w-[600px] lg:h-[100px]  text-white items-center justify-center lg:gap-3 border-[0.12rem] rounded-[2rem] border-white'>
         
             
-            <a href='#contacto' className='flex gap-1' target='_blank' onClick={copyToClipboard}>
-              <IoMailOutline className='text-[24px] ' />
-              {email}
-            </a>
+            <button className='flex gap-1' onClick={copyToClipboard}>
+              {copied 
+                ? <div className='flex gap-1.5'><MdOutlineMarkEmailRead className='text-[24px] '/>Email Copiado!</div>
+                : <div className='flex gap-1.5'><IoMailOutline className='text-[24px] '/> {email}</div> }
+              
+            </button>
         
 
         <a href="https://www.linkedin.com/in/gabriela-zarate-35748328b/" className='flex gap-1 items-center' target='_blank'>
