@@ -17,7 +17,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import pedidosYa from './assets/pedidosYa.mp4'
 import firstLaser from './assets/firstLaser.mp4'
 import angelaCafe from './assets/angelaCafe.mp4'
-
+import serum from './assets/serum.mp4'
+import doveHidratacion from './assets/Dove Hidratación.mp4'
 
 
 import ReactPlayer from 'react-player'
@@ -29,7 +30,10 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { useState } from 'react'
 
-const UGC_VIDEOS = [{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
+const UGC_VIDEOS = [{name:'Serum Cepage',video:serum},{name:'Dove Hidratacion',video:doveHidratacion},{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
+
+
+
 const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'  ,link:'https://fzaratem24.wixsite.com/est-tica-radiof-nica'},
                   {name: 'Infografia: Seminario Comunicacion y salud', data: trabajoFomo,type: 'imagen', link : ''},
                   {name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'  ,link:'https://issuu.com/revistabohem/docs/revistafinal_pico'},
@@ -58,18 +62,9 @@ function App() {
 
   return (
     <main id='inicio' translate='no'>
-      <header  className='flex justify-center items-center
-    mx-auto
-    py-5
-    sticky top-0
-    w-full xl:w-[1120px]
-    z-10'>
-        <nav className='border border-black rounded-full
-        px-3 py-1
-        flex flex-row items-center
-        
-        backdrop-blur-2xl'>
-          
+
+      <header  className='flex justify-center items-center mx-auto py-5 sticky top-0 w-full xl:w-[1120px] z-10'>
+        <nav className='border border-black rounded-full px-3 py-1 flex flex-row items-center backdrop-blur-2xl'> 
           <div>
             <ul className='flex gap-5 lg:gap-8 text-2xl text-white'>
             <li><a href="#inicio">Inicio </a></li>
@@ -101,9 +96,9 @@ function App() {
 
           </div>
         <div className='flex gap-2 justify-center items-center'>
-          <a href='https://www.instagram.com/gabizarate._/?hl=es-la'  target='_blank' className='p-2'><FaInstagram className='text-3xl'/></a>
-          <a href='https://www.tiktok.com/@gabizarate' target='_blank' className='p-2'><FaTiktok className='text-2xl'/></a>
-          <a href='https://www.linkedin.com/in/gabriela-zarate-35748328b/' target='_blank' className='p-2'><LiaLinkedin className = 'text-4xl'/></a>
+          <a href='https://www.instagram.com/gabizarate._/?hl=es-la'  target='_blank' className='p-2 hover:text-gray-400 transition duration-500 ease-in-out'><FaInstagram className='text-3xl'/></a>
+          <a href='https://www.tiktok.com/@gabizarate' target='_blank' className='p-2 hover:text-gray-400 transition duration-500 ease-in-out'><FaTiktok className='text-2xl'/></a>
+          <a href='https://www.linkedin.com/in/gabriela-zarate-35748328b/' target='_blank' className='p-2 hover:text-gray-400 transition duration-500 ease-in-out'><LiaLinkedin className = 'text-4xl'/></a>
         </div>
         </div>
 
@@ -157,17 +152,17 @@ creativa y personalmente.</p>
         <h1 className='text-center text-5xl mb-12 text-white'>Contenido Generado por el Usuario</h1>
 
         <div className='flex flex-wrap justify-center gap-8'>
-    {UGC_VIDEOS.map((video, index) => (
-        <div key={index} className='px-10 flex flex-col items-center'>
-            <div className='relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
-                <div className='absolute inset-[-19.5px] h-full w-full object-cover'>
-                    <ReactPlayer url={video.video} controls width={310} height={600} />
-                </div>
+          {UGC_VIDEOS.map((video, index) => (
+            <div key={index} className='px-10 flex flex-col items-center'>
+              <div className='relative h-[612px] w-[305px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
+                  <div className='absolute inset-[-19.5px] h-full w-full object-cover'>
+                      <ReactPlayer url={video.video} controls width={310} height={600} />
+                  </div>
+              </div>
+              <h2  className='text-xl text-white max-w-[305px] text-center  overflow-hidden'>{video.name}</h2>
             </div>
-            <h2  className='text-xl text-white max-w-[305px] text-center  overflow-hidden'>{video.name}</h2>
-        </div>
-    ))}
-</div>       
+        ))}
+        </div>       
       </section>
 
       <section className='my-20' id='trabajos'>
