@@ -29,8 +29,15 @@ import { LiaLinkedin } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { useState } from 'react'
+import { ServiceCard } from './components/ServiceCard'
+export interface Service {
+  title: string;
+  price: number;
+  features: string[];
+}
 
 const UGC_VIDEOS = [{name:'Serum Cepage',video:serum},{name:'Dove Hidratacion',video:doveHidratacion},{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
+
 
 
 
@@ -42,13 +49,29 @@ const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: El
                   {name: 'Salem Vintage', data: salemVintage,type: 'imagen ', link : ''}
                 ]
 
+const services : Service[]= [
+                  {
+                    title: 'Básico',
+                    price: 9.99,
+                    features: ['1 pantalla', 'Calidad SD', 'Acceso ilimitado'],
+                  },
+                  {
+                    title: 'Estándar',
+                    price: 13.99,
+                    features: ['2 pantallas', 'Calidad HD', 'Acceso ilimitado'],
+                  },
+                  {
+                    title: 'Premium',
+                    price: 17.99,
+                    features: ['4 pantallas', 'Calidad 4K', 'Acceso ilimitado'],
+                  },
+                ];
 
 function App() {
 
   const email = 'gabzm240@gmail.com';
 
   const [copied, setCopied] = useState(false);
-
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(email)
@@ -138,9 +161,10 @@ function App() {
 
             <div >
               <p>Me encuentro finalizando la carrera de Comunicacion social con orientacion en radio, soy pasionada por las redes sociales y creacion de contenido. Busco experiencia laboral y
-desarrollarme en campos que me
-permitan crecer profesional,
-creativa y personalmente.</p>
+                  desarrollarme en campos que me
+                  permitan crecer profesional,
+                  creativa y personalmente.
+              </p>
             </div>
           </div>
         </div>
@@ -186,6 +210,18 @@ creativa y personalmente.</p>
             </div>)}
           </div>        
       </section>
+
+      <div className="container mx-auto py-12">
+      <h2 className="text-3xl font-bold text-center mb-8">Nuestros Planes</h2>
+      <div className="flex flex-wrap justify-center gap-8">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            service= {service}
+          />
+        ))}
+      </div>
+    </div>
 
       <section className='my-20' id='contacto'>
         <p className='text-center text-lg text-gray-400'>Colaboremos</p>
