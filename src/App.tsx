@@ -30,8 +30,8 @@ import { IoMailOutline } from "react-icons/io5";
 import { LiaLinkedin } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
-import { useState } from 'react'
-import { ServiceCard } from './components/ServiceCard'
+import { useState } from 'react'/* 
+import { ServiceCard } from './components/ServiceCard' */
 export interface Service {
   title: string;
   price: number;
@@ -51,7 +51,7 @@ const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: El
                   {name: 'Salem Vintage', data: salemVintage,type: 'imagen ', link : ''}
                 ]
 
-const services : Service[]= [
+/* const services : Service[]= [
                   {
                     title: 'Básico',
                     price: 9.99,
@@ -67,7 +67,7 @@ const services : Service[]= [
                     price: 17.99,
                     features: ['4 pantallas', 'Calidad 4K', 'Acceso ilimitado'],
                   },
-                ];
+                ]; */
 
 function App() {
 
