@@ -18,7 +18,9 @@ import pedidosYa from './assets/pedidosYa.mp4'
 import firstLaser from './assets/firstLaser.mp4'
 import angelaCafe from './assets/angelaCafe.mp4'
 import serum from './assets/serum.mp4'
+import dove from './assets/dove.mp4'
 import doveHidratacion from './assets/Dove Hidratación.mp4'
+import geldelimpiezaloreal from './assets/geldelimpiezaloreal.mp4'
 
 
 import ReactPlayer from 'react-player'
@@ -36,7 +38,7 @@ export interface Service {
   features: string[];
 }
 
-const UGC_VIDEOS = [{name:'Serum Cepage',video:serum},{name:'Dove Hidratacion',video:doveHidratacion},{name: 'NIC',video:tiktok1},{name: 'Maybelline',video: labialMaybelline},{name:'Merienda',video:meriendacba},{name: 'Ondas',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
+const UGC_VIDEOS = [{name:'Loreal',video:geldelimpiezaloreal},{name:'Dove',video:doveHidratacion},{name: 'Maybelline',video: labialMaybelline},{name:'Dove',video:dove},{name:'Cepage',video:serum},{name: 'NIC',video:tiktok1},{name:'PinkCafe',video:meriendacba},{name: 'NIC',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
 
 
 
@@ -211,7 +213,7 @@ function App() {
           </div>        
       </section>
 
-      <div className="container mx-auto py-12">
+      {/* <div className="container mx-auto py-12">
       <h2 className="text-3xl font-bold text-center mb-8">Nuestros Planes</h2>
       <div className="flex flex-wrap justify-center gap-8">
         {services.map((service, index) => (
@@ -221,7 +223,7 @@ function App() {
           />
         ))}
       </div>
-    </div>
+    </div> */}
 
       <section className='my-20' id='contacto'>
         <p className='text-center text-lg text-gray-400'>Colaboremos</p>
