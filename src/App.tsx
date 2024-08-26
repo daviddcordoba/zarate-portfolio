@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 function App() {
   return (
     <main id='inicio' translate='no'>
-
       <header  className='fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-10 lg:mt-5'>
         <Nav/>
       </header>
