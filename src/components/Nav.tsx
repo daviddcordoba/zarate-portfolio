@@ -6,6 +6,7 @@ const Nav = () => {
             <ul className='flex gap-3 lg:gap-8 text-lg lg:text-xl text-white'>
             <li><a href="#inicio">Inicio </a></li>
             <li><a href="#sobremi">Sobre mi </a></li>
+            <li><a href="#cm">Community Manager </a></li>
             <li><a href="#ugc">UGC</a></li>
             <li><a href="#trabajos">Trabajos</a></li>
             <li><a href="#contacto">Contacto</a></li>

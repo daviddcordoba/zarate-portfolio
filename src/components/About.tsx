@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
         <p className='text-center text-lg text-gray-400'>Vamos a conocer mas</p>
-        <h1 className='text-center text-5xl text-white'>Sobre mi</h1>
+        <h1 className='text-center text-5xl text-white'>Sobre mí</h1>
         <div className='flex flex-col lg:flex-row  w-[90%] gap-5 mx-auto justify-center items-center my-10 text-white'>
 
           <div className="w-[350px] h-[500px] rounded-[2rem] overflow-hidden">
@@ -28,14 +28,14 @@ const About = () => {
 
               <div className='p-[1.5rem] flex-1 border-[0.12rem] rounded-[2rem] border-white '>
               <img src="" alt="" />
-                <h3 className='text-xl'>Educacion</h3>
-                <p>Lic. en Comunicacion Social</p>
-                <p>(En proceso de tesis)</p>
+                  <h3 className='text-xl'>Educación</h3>
+                <p>Lic. en Comunicación Social</p>
+                <p>(Finalizando carrera)</p>
               </div>
             </div>
 
             <div >
-              <p className='text-lg'>Me encuentro finalizando la carrera de Comunicacion social con orientacion en radio, soy pasionada por las redes sociales y creacion de contenido. Busco experiencia laboral y
+              <p className='text-lg'>Me encuentro finalizando la carrera de Comunicación social con orientación en radio, soy apasionada por las redes sociales y creación de contenido. Busco experiencia laboral y
                   desarrollarme en campos que me
                   permitan crecer profesional,
                   creativa y personalmente.

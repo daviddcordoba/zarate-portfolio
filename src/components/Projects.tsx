@@ -6,19 +6,17 @@ import otraPuesta from '../assets/otrapuestaCM.png'
 import salemVintage from '../assets/salemCM.png'
 import ReactPlayer from 'react-player'
 
-const TRABAJOS = [{name: 'Pieza sonora: Representacion de el silencio', data: ElSilencio,type: 'video'  ,link:'https://fzaratem24.wixsite.com/est-tica-radiof-nica'},
-    {name: 'Infografia: Seminario Comunicacion y salud', data: trabajoFomo,type: 'imagen', link : ''},
-    {name: 'Revista Bohem: Lenguaje y prod. Grafica', data: Bohem,type: 'imagen'  ,link:'https://issuu.com/revistabohem/docs/revistafinal_pico'},
-    {name: 'Pieza sonora: Homenaje a malvinas', data: Malvinas,type: 'video', link : '' },
-    {name: 'Otra puesta', data: otraPuesta,type: 'imagen ', link : ''},
-    {name: 'Salem Vintage', data: salemVintage,type: 'imagen ', link : ''}
+const TRABAJOS = [{name: 'Pieza sonora: Representación de el silencio', data: ElSilencio,type: 'video'  ,link:'https://fzaratem24.wixsite.com/est-tica-radiof-nica'},
+    {name: 'Infografía: Seminario Comunicación y salud', data: trabajoFomo,type: 'imagen', link : ''},
+    {name: 'Revista Bohem: Lenguaje y prod. Gráfica', data: Bohem,type: 'imagen'  ,link:'https://issuu.com/revistabohem/docs/revistafinal_pico'},
+    {name: 'Pieza sonora: Homenaje a Malvinas', data: Malvinas,type: 'video', link : '' }
   ]
 
 const Projects = () => {
   return (
     <>
-        <p className='text-center text-2xl text-gray-400'>Mas trabajos</p>
-        <h2 className='text-center text-4xl mb-12 text-white'>Produccion de contenido gráfico | Arte sonoro | Podcast</h2>
+        <p className='text-center text-2xl text-gray-400'>Más trabajos</p>
+        <h2 className='text-center text-4xl mb-12 text-white'>Producción de contenido gráfico | Arte sonoro | Podcast</h2>
 
         <div className='flex flex-wrap justify-center gap-8'>
             {TRABAJOS.map((trabajo,id) => 
