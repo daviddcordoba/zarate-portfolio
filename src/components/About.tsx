@@ -4,7 +4,7 @@ import about_pic from '../assets/fotogrupalfcc.jpg'
 const About = () => {
   return (
     <>
-        <p className='text-center text-lg text-gray-400'>Vamos a conocer mas</p>
+        <p className='text-center text-lg text-gray-400'>Vamos a conocer más</p>
         <h1 className='text-center text-5xl text-white'>Sobre mí</h1>
         <div className='flex flex-col lg:flex-row  w-[90%] gap-5 mx-auto justify-center items-center my-10 text-white'>
 
