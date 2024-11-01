@@ -2,8 +2,6 @@ import Malvinas from '../assets/MALVINAS.mp4'
 import trabajoFomo from '../assets/trabajoFOMO.jpeg'
 import ElSilencio from '../assets/ElSilencio.mp4'
 import Bohem from '../assets/bohem.jpeg'
-import otraPuesta from '../assets/otrapuestaCM.png'
-import salemVintage from '../assets/salemCM.png'
 import ReactPlayer from 'react-player'
 
 const TRABAJOS = [{name: 'Pieza sonora: Representación de el silencio', data: ElSilencio,type: 'video'  ,link:'https://fzaratem24.wixsite.com/est-tica-radiof-nica'},
