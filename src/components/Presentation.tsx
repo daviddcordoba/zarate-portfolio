@@ -1,7 +1,7 @@
 import { LiaLinkedin } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
-import resume from '../assets/CV-ZarateG.pdf'
+import resume from '../assets/gabrielazarateCv.pdf'
 import profile_pic from '../assets/profile_pic.jpeg'
 
 const Presentation = () => {
@@ -20,7 +20,7 @@ const Presentation = () => {
             <p className='text-2xl font-semibold text-white '> Lic. en Com. Social | Creadora de Contenido | Community Manager</p>
             
             <div className='flex gap-[1rem] justify-center '>
-              <button  className='bg-gray-200 font-semibold p-3 w-[8rem]  rounded-[2rem]'><a href={resume} download='zarate-gabrielaCV'>Descargar CV</a></button>
+              <button  className='bg-gray-200 font-semibold p-3 w-[8rem]  rounded-[2rem]'><a href={resume} download='gabrielazarateCv'>Descargar CV</a></button>
               
 
             </div>
