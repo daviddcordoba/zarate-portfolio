@@ -13,11 +13,13 @@ import meriendacba from '../assets/meriendacba.mp4'
 import ondasSinCalor from '../assets/ondasSinCalor.mp4'
 import grido from '../assets/grido.mp4'
 import garnier from '../assets/garnier.mp4'
+import salemnic from '../assets/Salem Vintage & Nic.mp4'
 
 const UGC_VIDEOS = [
   {name:'Garnier',video:garnier},
   {name:'Grido',video:grido},
   {name:'Loreal',video:geldelimpiezaloreal},
+  {name:'Salem Vintage & NIC',video:salemnic},
   {name:'Dove',video:doveHidratacion},
   {name: 'Maybelline',video: labialMaybelline},
   {name:'Dove',video:dove},
