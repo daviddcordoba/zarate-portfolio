@@ -11,8 +11,23 @@ import tiktok1 from '../assets/tiktok1.mp4'
 import labialMaybelline from '../assets/labialMaybelline.mp4'
 import meriendacba from '../assets/meriendacba.mp4'
 import ondasSinCalor from '../assets/ondasSinCalor.mp4'
+import grido from '../assets/grido.mp4'
+import garnier from '../assets/garnier.mp4'
 
-const UGC_VIDEOS = [{name:'Loreal',video:geldelimpiezaloreal},{name:'Dove',video:doveHidratacion},{name: 'Maybelline',video: labialMaybelline},{name:'Dove',video:dove},{name:'Cepage',video:serum},{name: 'NIC',video:tiktok1},{name:'PinkCafe',video:meriendacba},{name: 'NIC',video: ondasSinCalor},{name: 'PedidosYa',video: pedidosYa},{name: 'FirstLaser',video: firstLaser},{name: 'Angela Cafe',video: angelaCafe}]
+const UGC_VIDEOS = [
+  {name:'Garnier',video:garnier},
+  {name:'Grido',video:grido},
+  {name:'Loreal',video:geldelimpiezaloreal},
+  {name:'Dove',video:doveHidratacion},
+  {name: 'Maybelline',video: labialMaybelline},
+  {name:'Dove',video:dove},
+  {name:'Cepage',video:serum},
+  {name: 'NIC',video:tiktok1},
+  {name:'PinkCafe',video:meriendacba},
+  {name: 'NIC',video: ondasSinCalor},
+  {name: 'PedidosYa',video: pedidosYa},
+  {name: 'FirstLaser',video: firstLaser},
+  {name: 'Angela Cafe',video: angelaCafe}]
 
 const UGC = () => {
     const [visibleVideos, setVisibleVideos] = useState(6); // Número inicial de videos visibles
