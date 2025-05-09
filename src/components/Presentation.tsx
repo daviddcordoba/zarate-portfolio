@@ -2,14 +2,13 @@ import { LiaLinkedin } from "react-icons/lia";
 import { FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import resume from '../assets/gabrielazarateCv.pdf'
-import profile_pic from '../assets/profile_pic.jpeg'
 
 const Presentation = () => {
   return (
     <>
     <div className="w-[500px] h-[500px] rounded-full overflow-hidden hidden md:block">
           <img
-            src={profile_pic}
+            src='https://res.cloudinary.com/drz6ltx2z/image/upload/f_auto,q_auto/v1/videos/bt3wcuhcpxmvwzrpoqdu'
             alt="Foto de perfil"
             className="w-full h-full object-cover"
           />

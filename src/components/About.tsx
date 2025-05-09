@@ -1,5 +1,3 @@
-import about_pic from '../assets/fotogrupalfcc.jpg'
-
 
 const About = () => {
   return (
@@ -10,7 +8,7 @@ const About = () => {
 
           <div className="w-[350px] h-[500px] rounded-[2rem] overflow-hidden">
             <img
-              src={about_pic}
+              src='https://res.cloudinary.com/drz6ltx2z/image/upload/f_auto,q_auto/v1/videos/wfsfrej69rgymcr8rjpd'
               alt="Foto de perfil"
               className="w-full h-full object-cover "
             />
