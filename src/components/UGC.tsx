@@ -64,8 +64,8 @@ const UGC = () => {
 
         {visibleVideos < UGC_VIDEOS.length && (
             <button 
-            onClick={loadMoreVideos} 
-            className='mt-8 px-6 py-3 mx-auto w-[25%] bg-gray-200 text-black rounded-full'
+              onClick={loadMoreVideos} 
+              className='mt-8 px-6 py-3 mx-auto w-[25%] bg-gray-200 text-black rounded-full'
             >
             <span className='text-lg'>Ver más</span>
             </button>
