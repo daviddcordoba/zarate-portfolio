@@ -33,9 +33,10 @@ import { GrUserManager } from "react-icons/gr";
 const About = () => {
   return (
     <>
-      <p className='text-center text-lg text-gray-400'>Vamos a conocer más</p>
-      <h1 className='text-center text-5xl text-white'>Sobre mí</h1>
-
+    <p className="mx-auto text-center font-bold  px-3 py-1 rounded-full bg-warm-accent/10 text-warm-accent border border-accent border-warm-accent">
+  Sobre mi
+</p>
+     
       <div className='flex flex-col lg:flex-row w-[90%] gap-5 mx-auto justify-center items-center my-10 text-white'>
         <div className='w-[350px] h-[500px] rounded-[2rem] overflow-hidden'>
           <img

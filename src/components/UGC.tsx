@@ -42,7 +42,11 @@ const UGC = () => {
     };
   return (
     <>
-        <p className='text-center text-lg  '>UGC</p>
+        <p className="inline-block mx-auto text-center font-bold  px-3 py-1 rounded-full bg-warm-accent/10 text-warm-accent border border-accent border-warm-accent">
+  UGC
+</p>
+
+
         <h1 className='text-center text-5xl mb-12 '>Contenido Generado por el Usuario</h1>
 
         <div className='flex flex-wrap justify-center gap-8'>

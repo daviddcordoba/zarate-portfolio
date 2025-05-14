@@ -6,7 +6,7 @@ import profile_pic from "../assets/profile_pic.jpeg"
 
 const Presentation = () => {
   return (
-    <div className="flex flex-col items-center gap-8 p-4 text-white rounded-lg  mx-auto">
+    <div className="flex flex-col items-center gap-8 p-4  rounded-lg  mx-auto">
       {/* Imagen de perfil */}
       <div className="relative w-64 h-64 overflow-hidden rounded-full border-4 border-white/20">
         <img src={profile_pic || "/placeholder.svg"} alt="Foto de perfil" className="w-full h-full object-cover" />
@@ -28,7 +28,7 @@ const Presentation = () => {
           <a
             href="https://www.instagram.com/gabizarate._/?hl=es-la"
             target="_blank"
-            className="text-white hover:text-white/80 transition duration-300"
+            className="text-warm-accent hover:text-warm-accent/80 transition duration-300"
             rel="noreferrer"
           >
             <FaInstagram className="text-3xl" />
@@ -36,7 +36,7 @@ const Presentation = () => {
           <a
             href="https://www.tiktok.com/@gabizarate"
             target="_blank"
-            className="text-white hover:text-white/80 transition duration-300"
+            className="text-warm-accent hover:text-warm-accent/80 transition duration-300"
             rel="noreferrer"
           >
             <FaTiktok className="text-3xl" />
@@ -44,7 +44,7 @@ const Presentation = () => {
           <a
             href="https://www.linkedin.com/in/gabriela-zarate-35748328b/"
             target="_blank"
-            className="text-white hover:text-white/80 transition duration-300"
+            className="text-warm-accent hover:text-warm-accent/80 transition duration-300"
             rel="noreferrer"
           >
             <LiaLinkedin className="text-3xl" />

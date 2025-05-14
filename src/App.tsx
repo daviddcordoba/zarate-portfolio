@@ -17,7 +17,7 @@ function App() {
         <Presentation/>
       </section>
 
-      <section id='sobremi' >
+      <section id='sobremi' className='my-20 flex flex-col' >
         <About/>
       </section>
 
