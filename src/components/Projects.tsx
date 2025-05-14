@@ -13,8 +13,8 @@ const TRABAJOS = [{name: 'Pieza sonora: Representación de el silencio', data: E
 const Projects = () => {
   return (
     <>
-        <p className='text-center text-2xl text-gray-400'>Más trabajos</p>
-        <h2 className='text-center text-4xl mb-12 text-white'>Producción de contenido gráfico | Arte sonoro | Podcast</h2>
+        <p className='text-center text-2xl '>Más trabajos</p>
+        <h2 className='text-center text-4xl mb-12 '>Producción de contenido gráfico | Arte sonoro | Podcast</h2>
 
         <div className='flex flex-wrap justify-center gap-8'>
             {TRABAJOS.map((trabajo,id) => 
@@ -28,8 +28,8 @@ const Projects = () => {
                         </div>
                     </div>
                 {trabajo?.link?.length > 0 
-                    ? <a target='_blank' className='text-xl text-white max-w-[305px] text-center overflow-hidden hover:underline' href={trabajo.link}>{trabajo.name}</a> 
-                    : <h2 className='text-xl text-white max-w-[305px] text-center overflow-hidden'>{trabajo.name}</h2> 
+                    ? <a target='_blank' className='text-xl  max-w-[305px] text-center overflow-hidden hover:underline' href={trabajo.link}>{trabajo.name}</a> 
+                    : <h2 className='text-xl  max-w-[305px] text-center overflow-hidden'>{trabajo.name}</h2> 
                 }
                 </div>
             )}

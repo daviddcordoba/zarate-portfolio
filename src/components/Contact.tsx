@@ -22,10 +22,10 @@ const Contact = () => {
     };
   return (
     <>
-    <p className='text-center text-lg text-gray-400'>Colaboremos</p>
-        <h1 className='text-center text-5xl text-white'>Contactate conmigo</h1>
+    <p className='text-center text-lg '>Colaboremos</p>
+        <h1 className='text-center text-5xl '>Contactate conmigo</h1>
 
-        <div className=' flex flex-col w-[400px] h-[180px] gap-4 lg:flex-row  mt-5  mx-auto lg:w-[600px] lg:h-[100px]  text-white items-center justify-center lg:gap-3 border-[0.12rem] rounded-[2rem] border-white'>
+        <div className=' flex flex-col w-[400px] h-[180px] gap-4 lg:flex-row  mt-5  mx-auto lg:w-[600px] lg:h-[100px]   items-center justify-center lg:gap-3 border-[0.12rem] rounded-[2rem] border-black'>
         
             
             <button className='flex gap-1' onClick={copyToClipboard}>

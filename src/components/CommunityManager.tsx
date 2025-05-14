@@ -30,7 +30,7 @@ const CommunityManager  = () => {
     };
   return (
     <>
-        <h1 className='text-center text-5xl mb-12 text-white'>Community Manager</h1>
+        <h1 className='text-center text-5xl mb-12 '>Community Manager</h1>
 
         <div className='flex flex-wrap justify-center gap-8'>
             {COMMUNITY_VIDEOS.slice(0, visibleVideos).map((video, index) => (
@@ -44,8 +44,8 @@ const CommunityManager  = () => {
                         </div>
                     </div>
                     {video?.link?.length > 0 
-                    ? <a target='_blank' className='text-xl text-white max-w-[305px] text-center overflow-hidden hover:underline' href={video.link}>{video.name}</a> 
-                    : <h2 className='text-xl text-white max-w-[305px] text-center overflow-hidden'>{video.name}</h2> 
+                    ? <a target='_blank' className='text-xl  max-w-[305px] text-center overflow-hidden hover:underline' href={video.link}>{video.name}</a> 
+                    : <h2 className='text-xl  max-w-[305px] text-center overflow-hidden'>{video.name}</h2> 
                 }
                 </div>
             ))}

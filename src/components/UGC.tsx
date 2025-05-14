@@ -42,8 +42,8 @@ const UGC = () => {
     };
   return (
     <>
-        <p className='text-center text-lg text-gray-400 '>UGC</p>
-        <h1 className='text-center text-5xl mb-12 text-white'>Contenido Generado por el Usuario</h1>
+        <p className='text-center text-lg  '>UGC</p>
+        <h1 className='text-center text-5xl mb-12 '>Contenido Generado por el Usuario</h1>
 
         <div className='flex flex-wrap justify-center gap-8'>
             {UGC_VIDEOS.slice(0, visibleVideos).map((video, index) => (
@@ -53,7 +53,7 @@ const UGC = () => {
                             <ReactPlayer url={video.video} controls width={310} height={600} />
                         </div>
                     </div>
-                    <h2 className='text-xl text-white max-w-[305px] text-center overflow-hidden'>{video.name}</h2>
+                    <h2 className='text-xl  max-w-[305px] text-center overflow-hidden'>{video.name}</h2>
                 </div>
             ))}
         </div>  
