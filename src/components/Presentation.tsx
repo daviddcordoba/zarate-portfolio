@@ -7,8 +7,12 @@ const Presentation = () => {
   return (
     <div className="flex flex-col items-center gap-10 p-4  rounded-lg  mx-auto ">
       {/* Imagen de perfil */}
-      <div className="relative w-[375px] h-[375px] overflow-hidden rounded-full border-4 border-white/20">
-        <img src={"https://res.cloudinary.com/drz6ltx2z/image/upload/v1746661745/videos/bt3wcuhcpxmvwzrpoqdu.jpg"} alt="Foto de perfil" className="w-full h-full object-cover" />
+      <div className="relative w-[375px] h-[375px] overflow-hidden rounded-full border-4 border-white">
+        <img 
+          src={"https://res.cloudinary.com/drz6ltx2z/image/upload/v1746661745/videos/bt3wcuhcpxmvwzrpoqdu.jpg"} 
+          alt="Foto de perfil" 
+          className="w-full h-full object-cover"
+        />
       </div>
 
       {/* Información y botones */}

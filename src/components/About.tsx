@@ -19,14 +19,14 @@ const education = [
   
 const experience = [
     {
-      degree: "Coordinadora del equipo de Comunicacion",
+      degree: "Coordinadora del equipo de Comunicación",
       institution: "Feria Solidaria Trelew",
       year: "Actual",
 
     },
     {
       degree: "Creadora de contenido",
-      institution: "L'Oréal",
+      institution: "L'Oréal Paris Argentina",
       year: "Actual",
 
     },
@@ -45,7 +45,7 @@ const About = () => {
           <div className="md:col-span-8 space-y-8">
             <div className=" p-6">
               <div className="space-y-4">
-                <p className="text-xl leading-relaxed">
+                <p className="text-lg leading-relaxed font-semibold">
                   Me encuentro finalizando la carrera de Comunicación social con orientación en radio, soy apasionada
                   por las redes sociales y creación de contenido. Busco experiencia laboral y desarrollarme en campos
                   que me permitan crecer profesional, creativa y personalmente.
@@ -77,7 +77,7 @@ const About = () => {
 
               <div className="space-y-4">
                 {education.map((e,key)=>(
-                  <div key={key} className="bg-[#eaddf1] rounded-lg shadow-md border  p-6">
+                  <div key={key} className="bg-[#F8F0FE] rounded-lg shadow-md border  p-6">
                   <div className="border-l-4 border-[#9637e6] pl-4">
                     <h3 className="font-bold text-xl">{e.degree}</h3>
                     <p className=" text-gray-600 font-semibold">{e.institution} {e.year && `| ${e.year}`}</p>
@@ -111,23 +111,16 @@ const About = () => {
               <div className="space-y-4">
 
                 {experience.map((e,key)=>(
-                  <div key={key} className="bg-[#eaddf1] rounded-lg shadow-md border b p-6">
+                  <div key={key} className="bg-[#F8F0FE] rounded-lg shadow-md border b p-6">
                     <div className="border-l-4 border-[#9637e6] pl-4">
                       <h3 className="font-bold text-xl">{e.degree}</h3>
                       <p className="text-gray-600 font-semibold">{e.institution} | {e.year}</p>
-                      <p className="mt-2 font-semibold text-sm">
-                        Responsable de coordinar las estrategias de comunicación y gestión de redes sociales.
-                      </p>
+                      
                     </div>
                   </div>
                 ))}
-
-                
-              
-              </div>
-              
+              </div>              
             </div>
-            
           </div>
         </div>
       </div>
