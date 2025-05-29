@@ -13,7 +13,7 @@ function App() {
     <main id='inicio' translate='no'>
       <Nav/>
     
-      <section  className='w-auto mx-auto mt-10 gap-5 lg:gap-[10rem] h-[75vh] md:h-[80vh] flex items-center'>
+      <section  className='w-auto mt-10 gap-5 lg:gap-[10rem] h-[100vh] flex items-center justify-center'>
         <Presentation/>
       </section>
 
@@ -37,7 +37,7 @@ function App() {
         <Projects/>       
       </section>
 
-      <footer className='my-20' id='contacto'>
+      <footer className='my-20 text-center ' id='contacto'>
         <Contact/>
       </footer>
     </main>

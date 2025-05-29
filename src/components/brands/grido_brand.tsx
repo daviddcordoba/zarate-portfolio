@@ -1,5 +1,10 @@
 const GridoLogo = ()=> (
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.0"  viewBox="0 0 2000.000000 1284.000000" preserveAspectRatio="xMidYMid meet">
+    <svg 
+    className = "w-[7rem] h-[7rem]"
+    xmlns="http://www.w3.org/2000/svg" 
+    version="1.0"  
+    viewBox="0 0 2000.000000 1284.000000" 
+    preserveAspectRatio="xMidYMid meet">
 
 <g transform="translate(0.000000,1284.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
 <path d="M8994 12821 c-182 -49 -318 -160 -402 -327 -52 -103 -69 -286 -37 -409 53 -204 233 -382 436 -430 140 -33 321 -9 438 57 31 17 90 66 132 107 120 120 174 252 173 426 -1 320 -254 578 -579 591 -67 3 -108 -1 -161 -15z"/>

@@ -1,117 +1,136 @@
-import about_pic from '../assets/fotogrupalfcc.jpg';
-import { IoSchoolSharp } from "react-icons/io5";
-import { BiMessageRoundedDetail } from "react-icons/bi";
-
-import { GrUserManager } from "react-icons/gr";
-
- const education = [
+const education = [
     {
       degree: "Licenciatura en Comunicación Social",
-      institution: "Universidad Nacional",
-      year: "2020",
-    },
-    {
-      degree: "Certificación en Marketing Digital",
-      institution: "Google Digital Garage",
-      year: "2021",
-    },
-  ]
-
-  const experience = [
-    {
-      degree: "Coordinadora del equipo de Comunicacion",
-      institution: "Feria Solidaria Trelew",
+      institution: "Universidad Nacional de Córdoba ",
       year: "Actual",
     },
     {
       degree: "Certificación en Marketing Digital",
-      institution: "Google Digital Garage",
-      year: "2021",
+      institution: "CoderHouse",
+      year: "",
+    }
+    ,
+    {
+      degree: "Certificación en Community Manager",
+      institution: "CoderHouse",
+      year: "",
+    },
+  ]
+  
+const experience = [
+    {
+      degree: "Coordinadora del equipo de Comunicacion",
+      institution: "Feria Solidaria Trelew",
+      year: "Actual",
+
+    },
+    {
+      degree: "Creadora de contenido",
+      institution: "L'Oréal",
+      year: "Actual",
+
     },
   ]
 
 const About = () => {
   return (
     <>
-    <p className="mx-auto text-center font-bold  px-3 py-1 rounded-full bg-warm-accent/10 text-warm-accent border border-accent border-warm-accent">
-  Sobre mi
-</p>
-     
-      <div className='flex flex-col lg:flex-row w-[90%] gap-5 mx-auto justify-center items-center my-10 text-white'>
-        <div className='w-[350px] h-[500px] rounded-[2rem] overflow-hidden'>
-          <img
-            src={about_pic}
-            alt='Foto de perfil'
-            className='w-full h-full object-cover'
-          />
-        </div>
+   
+      <div className="container mx-auto py-12 px-4 md:px-6">
+        <h1 className="text-3xl font-bold text-center mb-8 ">Sobre mí</h1>
 
-        <div className='flex flex-col gap-6 w-[80%] lg:w-[50%]'>
-        
-          <div>
-            <p className='text-lg'>
-              Me encuentro finalizando la carrera de Comunicación social con orientación en radio, soy apasionada por las redes sociales y creación de contenido. Busco experiencia laboral y desarrollarme en campos que me permitan crecer profesional, creativa y personalmente.
-            </p>
-          </div>
-
-          <div>
-                <h3 className="text-xl font-bold  mb-4">Educación</h3>
-                <div className="space-y-4">
-                  {education.map((edu, index) => (
-                    <div key={index} className="border-l-4 border-[#8e5a9a] pl-4">
-                      <h4 className="text-lg font-semibold">{edu.degree}</h4>
-                      <p className="">
-                        {edu.institution} | {edu.year}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-          </div>
-
-          <div>
-                <h3 className="text-xl font-bold  mb-4">Experiencia</h3>
-                <div className="space-y-4">
-                  {experience.map((edu, index) => (
-                    <div key={index} className="border-l-4 border-[#8e5a9a] pl-4">
-                      <h4 className="text-lg font-semibold">{edu.degree}</h4>
-                      <p className="">
-                        {edu.institution} | {edu.year}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-          </div>
-      </div>
+        <div className="grid grid-cols-1  gap-8 ">
           
-        </div>
+          {/* Columna de información */}
+          <div className="md:col-span-8 space-y-8">
+            <div className=" p-6">
+              <div className="space-y-4">
+                <p className="text-xl leading-relaxed">
+                  Me encuentro finalizando la carrera de Comunicación social con orientación en radio, soy apasionada
+                  por las redes sociales y creación de contenido. Busco experiencia laboral y desarrollarme en campos
+                  que me permitan crecer profesional, creativa y personalmente.
+                </p>
 
-        {/* <div className='flex flex-col gap-5 p-5 w-[90%] mx-auto'>
-        <div className='flex items-center  p-4 border-[0.12rem] rounded-[2rem] border-white'>
-          <div className='text-2xl mr-4 bg-purple-800 rounded-full w-10 h-10 flex items-center justify-center'>
-            <IoSchoolSharp />
-          </div>
-          <div className='flex-1'>
-            <h3 className='text-lg font-bold text-white mb-2'>Educación</h3>
-            <p className='text-base text-white'>
-              Lic. en Comunicación Social (Finalizando carrera)
-            </p>
+                
+              </div>
+            </div>
+
+            {/* Educación */}
+            <div>
+              <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                Educación
+              </h2>
+
+              <div className="space-y-4">
+                {education.map((e,key)=>(
+                  <div key={key} className="bg-[#eaddf1] rounded-lg shadow-md border  p-6">
+                  <div className="border-l-4 border-[#9637e6] pl-4">
+                    <h3 className="font-bold text-xl">{e.degree}</h3>
+                    <p className=" text-gray-600 font-semibold">{e.institution} {e.year && `| ${e.year}`}</p>
+                  </div>
+                </div>
+                ))}
+              </div>
+              
+            </div>
+
+            {/* Experiencia */}
+            <div>
+              <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+                Experiencia
+              </h2>
+
+              <div className="space-y-4">
+
+                {experience.map((e,key)=>(
+                  <div key={key} className="bg-[#eaddf1] rounded-lg shadow-md border b p-6">
+                    <div className="border-l-4 border-[#9637e6] pl-4">
+                      <h3 className="font-bold text-xl">{e.degree}</h3>
+                      <p className="text-gray-600 font-semibold">{e.institution} | {e.year}</p>
+                      <p className="mt-2 font-semibold text-sm">
+                        Responsable de coordinar las estrategias de comunicación y gestión de redes sociales.
+                      </p>
+                    </div>
+                  </div>
+                ))}
+
+                
+              
+              </div>
+              
+            </div>
+            
           </div>
         </div>
-        <div className='p-[1.5rem] flex-3 border-[0.12rem] rounded-[2rem] border-white'>
-          <h3 className='text-xl font-bold text-white mb-2'>Certificaciones Adicionales</h3>
-          <div className='flex items-center mb-2'>
-            <span className='text-2xl mr-2'><BiMessageRoundedDetail /></span>
-            <p className='text-base text-white'>Community Manager - CoderHouse</p>
-          </div>
-          <div className='flex items-center'>
-            <span className='text-2xl mr-2'><GrUserManager /></span>
-            <p className='text-base text-white'>Product Manager - CoderHouse</p>
-          </div>
-        </div>
-      </div> */}
-
-      
-
+      </div>
     
     </>
   );

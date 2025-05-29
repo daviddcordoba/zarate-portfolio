@@ -7,7 +7,7 @@ import GridoLogo from '../components/brands/grido_brand'
 const brands = [
     {
       name: "Marca 1",
-      logo: <DoveLogo/>,
+      logo: <DoveLogo />,
     },
     {
       name: "Marca 2",
@@ -33,23 +33,22 @@ const brands = [
 
 const BrandCollaboration = () => {
   return (
-        <div className="max-w-4xl mx-auto my-12 px-4 bg-warm-background text-warm-accent">
+        <div className="max-w-4xl mx-auto my-12 px-4  ">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-black">
+            <h2 className="text-3xl font-bold ">
               Marcas con las que he colaborado
             </h2>
-            <div className="w-20 h-1 bg-black mx-auto mt-2 rounded-full"></div>
+            
           </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-          {brands.map((brand, index) => (
-            <div key={index} className="flex  items-center justify-center p-4 hover:opacity-80 transition-opacity">
-              
-              {brand.logo}
-              </div>
-          ))}       
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {brands.map((brand, index) => (
+              <div key={index} className="flex  items-center justify-center p-4 hover:opacity-80 transition-opacity">
+                  {brand.logo}
+                </div>
+            ))}       
+          </div>
         </div>
-    </div>
   )
 }
 
