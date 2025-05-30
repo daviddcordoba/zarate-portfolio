@@ -11,7 +11,7 @@ const Nav = () => {
 
   return (
     <header className="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-5">
-      <nav className="flex  px-2 text-sm font-medium rounded-full text-gray-200 justify-center items-center bg-white/10 dark:bg-gray-800/90 backdrop-blur-md">
+      <nav className="flex  px-2 text-sm font-medium rounded-full text-red-200 justify-center items-center bg-white/10 dark:bg-gray-800/90 backdrop-blur-md">
         {navItems.map((link) => (
           <a
             key={link.label}
