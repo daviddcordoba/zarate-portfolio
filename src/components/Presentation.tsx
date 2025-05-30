@@ -5,9 +5,9 @@ import { FaTiktok } from "react-icons/fa6"
 
 const Presentation = () => {
   return (
-    <div className="flex flex-col items-center gap-10 p-4  rounded-lg  mx-auto ">
+    <div className="flex flex-col  gap-10  rounded-lg  container mx-auto p-2 ">
       {/* Imagen de perfil */}
-      <div className="relative w-[375px] h-[375px] overflow-hidden rounded-full border-4 border-white">
+      <div className="relative w-[375px] h-[375px] overflow-hidden rounded-full border-4 border-white mx-auto">
         <img 
           src={"https://res.cloudinary.com/drz6ltx2z/image/upload/v1746661745/videos/bt3wcuhcpxmvwzrpoqdu.jpg"} 
           alt="Foto de perfil" 

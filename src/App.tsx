@@ -10,14 +10,14 @@ import BrandCollaboration from './components/BrandCollaboration'
 
 function App() {
   return (
-    <main id='inicio' translate='no'>
+    <main id='inicio' translate='no' className='flex flex-col items-center justify-center '>
       <Nav/>
     
-      <section  className='w-auto mt-10 gap-5 lg:gap-[10rem] h-[100vh] flex items-center justify-center'>
+      <section  className='mt-32  mx-auto'>
         <Presentation/>
       </section>
 
-      <section id='sobremi' className='my-20 flex flex-col' >
+      <section id='sobremi' className='my-20  flex flex-col' >
         <About/>
       </section>
 

@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+    
       colors: {
         warm: {
             background: '#FDF6F0', // fondo general
