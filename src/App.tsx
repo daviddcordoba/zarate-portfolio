@@ -6,20 +6,23 @@ import UGC from './components/UGC'
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import CommunityManager from './components/CommunityManager'
+import BrandCollaboration from './components/BrandCollaboration'
 
 function App() {
   return (
-    <main id='inicio' translate='no'>
-      <header  className='fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-10 lg:mt-5'>
-        <Nav/>
-      </header>
-
-      <section  className='w-[85%] mx-auto mt-10 gap-5 lg:gap-[10rem] h-[70vh] flex items-center'>
+    <main id='inicio' translate='no' className='flex flex-col items-center justify-center '>
+      <Nav/>
+    
+      <section  className='mt-32  mx-auto'>
         <Presentation/>
       </section>
 
-      <section id='sobremi' >
+      <section id='sobremi' className='my-20  flex flex-col' >
         <About/>
+      </section>
+
+      <section className='my-20 flex flex-col'>
+        <BrandCollaboration/>
       </section>
 
       <section className='my-20 flex flex-col' id='ugc'>
@@ -34,7 +37,7 @@ function App() {
         <Projects/>       
       </section>
 
-      <footer className='my-20' id='contacto'>
+      <footer className='my-20 text-center ' id='contacto'>
         <Contact/>
       </footer>
     </main>

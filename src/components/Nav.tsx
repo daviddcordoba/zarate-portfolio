@@ -1,19 +1,31 @@
 
-const Nav = () => {
-  return (
-    <nav className='border border-black rounded-full px-3 py-1 flex flex-row items-center backdrop-blur-2xl'> 
-          <div>
-            <ul className='flex gap-3 lg:gap-8 text-lg lg:text-xl text-white'>
-            <li><a href="#inicio">Inicio </a></li>
-            <li><a href="#sobremi">Sobre mi </a></li>
-            <li><a href="#cm">Community Manager </a></li>
-            <li><a href="#ugc">UGC</a></li>
-            <li><a href="#trabajos">Trabajos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            </ul>
-          </div>
-        </nav>
-  )
-}
+const navItems = [
+  { title: "Inicio", label: "inicio", url: "/#inicio" },
+  { title: "UGC", label: "ugc", url: "/#ugc" },
+  { title: "CM", label: "cm", url: "/#cm" },
+  { title: "Trabajos", label: "trabajos", url: "/#trabajos" },
+  { title: "Contacto", label: "contacto", url: "/#contacto" },
+];
 
-export default Nav
+const Nav = () => {
+
+  return (
+    <header className="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-5">
+      <nav className="flex  px-2 text-sm font-medium rounded-full text-gray-200 justify-center items-center bg-white/10 dark:bg-gray-800/90 backdrop-blur-md">
+        {navItems.map((link) => (
+          <a
+            key={link.label}
+            className="relative block px-2 py-2 transition hover:text-gray-400 whitespace-nowrap"
+            aria-label={link.label}
+            href={link.url}
+          >
+            {link.title}
+          </a>
+        ))}
+    
+      </nav>
+    </header>
+  );
+};
+
+export default Nav;
