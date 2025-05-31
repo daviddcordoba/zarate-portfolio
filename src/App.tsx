@@ -13,31 +13,31 @@ function App() {
     <main id='inicio' translate='no' className='grid '>
       <Nav/>
     
-      <section  className='mt-32 w-full flex flex-col items-center justify-center'>
+      <section  className='mt-32 '>
         <Presentation/>
       </section>
 
-      <section id='sobremi' className='my-20  flex flex-col' >
+      <section id='sobremi' className='my-20  ' >
         <About/>
       </section>
 
-      <section className='my-20 flex flex-col'>
+      <section className='my-20'>
         <BrandCollaboration/>
       </section>
 
-      <section className='my-20 flex flex-col' id='ugc'>
+      <section className='my-10 flex flex-col' id='ugc'>
         <UGC/>
       </section>
 
-      <section  className='my-20 flex flex-col' id='cm'>
+      <section  className='my-10 ' id='cm'>
         <CommunityManager/>
       </section>
 
-      <section className='my-20' id='trabajos'>
+      <section className='my-10' id='trabajos'>
         <Projects/>       
       </section>
 
-      <footer className='my-20 text-center ' id='contacto'>
+      <footer className='my-10 text-center ' id='contacto'>
         <Contact/>
       </footer>
     </main>
