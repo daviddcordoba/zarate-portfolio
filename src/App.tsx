@@ -10,10 +10,10 @@ import BrandCollaboration from './components/BrandCollaboration'
 
 function App() {
   return (
-    <main id='inicio' translate='no' className='flex flex-col items-center justify-center '>
+    <main id='inicio' translate='no' className='grid '>
       <Nav/>
     
-      <section  className='mt-32  mx-auto'>
+      <section  className='mt-32 w-full flex flex-col items-center justify-center'>
         <Presentation/>
       </section>
 

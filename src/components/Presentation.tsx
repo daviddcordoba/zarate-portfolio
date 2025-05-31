@@ -5,7 +5,7 @@ import { FaTiktok } from "react-icons/fa6"
 
 const Presentation = () => {
   return (
-    <div className="flex flex-col  gap-10  rounded-lg  container mx-auto p-2 ">
+    <div className="flex flex-col items-center justify-center gap-10  rounded-lg  ">
       {/* Imagen de perfil */}
       <div className=" w-[375px] h-[375px] overflow-hidden rounded-full border-4 border-white mx-auto">
         <img 
