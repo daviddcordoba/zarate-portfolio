@@ -10,7 +10,7 @@ import BrandCollaboration from './components/BrandCollaboration'
 
 function App() {
   return (
-    <main id='inicio' translate='no' className='grid '>
+    <main id='inicio' translate='no' className='px-2'>
       <Nav/>
     
       <section  className='mt-32 '>

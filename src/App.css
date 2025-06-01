@@ -5,6 +5,10 @@ body{
   font-family: 'Quicksand','Poppins', sans-serif;
   background-color: #d9b6fc;
   color:#120222;
+  display: grid;
+  place-items: center;
+  min-height: 100vh; /* Asegura que el grid ocupe toda la pantalla */
+  margin: 0; 
 }
 
 html{
