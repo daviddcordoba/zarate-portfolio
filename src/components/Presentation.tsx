@@ -59,14 +59,7 @@ const Presentation = () => {
           >
             <FaTiktok className="text-3xl" />
           </a>
-          <a
-            href="https://www.linkedin.com/in/gabriela-zarate-35748328b/"
-            target="_blank"
-            className="text-[#120222] hover:text-[#120222]/80 transition duration-300"
-            rel="noreferrer"
-          >
-            <LiaLinkedin className="text-4xl" />
-          </a>
+          
         </div>
       </div>
     </div>
