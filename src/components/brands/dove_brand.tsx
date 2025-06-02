@@ -1,6 +1,5 @@
 const DoveLogo = () => (
     <svg 
-    className = "w-[8rem] h-[8rem]"
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 192.756 192.756">
         <g fillRule="evenodd" 

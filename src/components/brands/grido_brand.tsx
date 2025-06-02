@@ -1,6 +1,5 @@
 const GridoLogo = ()=> (
     <svg 
-    className = "w-[7rem] h-[7rem]"
     xmlns="http://www.w3.org/2000/svg" 
     version="1.0"  
     viewBox="0 0 2000.000000 1284.000000" 

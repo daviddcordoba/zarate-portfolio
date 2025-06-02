@@ -7,27 +7,27 @@ import GridoLogo from '../components/brands/grido_brand'
 const brands = [
     {
       name: "Marca 1",
-      logo: <DoveLogo />,
+      logo: <DoveLogo  />,
     },
     {
       name: "Marca 2",
-      logo: <LorealLogo/>,
+      logo: <LorealLogo />,
     },
     {
       name: "Marca 3",
-      logo: <PedidosYaLogo/>
+      logo: <PedidosYaLogo />
     },
     {
       name: "Marca 4",
-      logo: <GarnierLogo/>
+      logo: <GarnierLogo />
     },
     {
       name: "Marca 5",
-      logo: <MaybellineLogo/>
+      logo: <MaybellineLogo />
       },
     {
       name: "Marca 6",
-      logo: <GridoLogo/>
+      logo: <GridoLogo />
     }
   ]
 
@@ -41,10 +41,13 @@ const BrandCollaboration = () => {
             
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {brands.map((brand, index) => (
-              <div key={index} className="flex  items-center justify-center p-4 hover:opacity-80 transition-opacity">
-                  {brand.logo}
+              <div key={index} className="flex items-center justify-center p-4 hover:opacity-80 transition-opacity w-[200px] h-[200px] mx-auto">
+                  <div className="w-full h-auto mx-auto"> 
+
+                  {brand.logo} {/* // svg */}
+                  </div>
                 </div>
             ))}       
           </div>
