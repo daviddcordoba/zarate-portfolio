@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import ReactPlayer from 'react-player'
 import db from '../../firebase_config.ts'
-import { collection, onSnapshot, query, where } from "firebase/firestore";
+import { collection, onSnapshot, orderBy, query, where } from "firebase/firestore";
 
 
 interface UGC_VIDEO {
   id:string;
   video?:string; 
   name?:string
+  rank?:number
 }
 
 const UGC = () => {
@@ -22,7 +23,12 @@ const UGC = () => {
     };
     useEffect(() => {
         
-      const q = query(collection(db, "assets"), where("section", "==", "ugc"));
+      const q = query(
+        collection(db, "assets"), 
+        where("section", "==", "ugc"),
+        orderBy("rank","desc")
+      );
+
       const unsubscribe = onSnapshot(
           q,
           (snapshot) => {
@@ -47,8 +53,8 @@ const UGC = () => {
         <h1 className='text-center text-5xl mb-12 '>Contenido Generado por el Usuario</h1>
 
         <div className='flex flex-wrap justify-center gap-8'>
-            {ugcVideos.slice(0, visibleVideos).map((video, index) => (
-                <div key={index} className='px-10 flex flex-col items-center'>
+            {ugcVideos.slice(0, visibleVideos).map((video) => (
+                <div key={video.id} className='px-10 flex flex-col items-center'>
                     <div className='relative h-[612px] w-[306px] bg-black rounded-[60px] shadow-xl overflow-hidden border-[14px] border-black'>
                         <div className='absolute inset-[-19.5px] h-full w-full object-cover'>
                             <ReactPlayer url={video.video} controls width={310} height={600} />

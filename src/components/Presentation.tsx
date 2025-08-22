@@ -1,4 +1,4 @@
-import { LiaLinkedin } from "react-icons/lia"
+
 import { FaInstagram } from "react-icons/fa"
 import { FaTiktok } from "react-icons/fa6"
 //import resume from "../assets/gabrielazarateCv.pdf"
